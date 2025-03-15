@@ -74,7 +74,7 @@ def procesar_archivo(df, fecha, nro_comprobante_inicial):
         df[columna] = df[columna].str.replace(r'\.0$', '', regex=True)
     
     # Crear un archivo temporal para guardar el resultado
-    with tempfile.NamedTemporaryFile(delete=False, suffix='.hab', mode='w', encoding='ansi', newline='\r\n') as temp_file:
+    with tempfile.NamedTemporaryFile(delete=False, suffix='.hab', mode='w', encoding='latin-1', newline='\r\n') as temp_file:
         archivo_salida = temp_file.name
         
         # Contador para líneas con longitud incorrecta
@@ -192,7 +192,7 @@ if uploaded_file is not None:
                     archivo_salida, lineas_incorrectas = procesar_archivo(df, fecha_formateada, nro_comprobante_inicial)
                     
                     # Leer el archivo generado para mostrar vista previa
-                    with open(archivo_salida, 'r', encoding='ansi') as f:
+                    with open(archivo_salida, 'r', encoding='latin-1') as f:
                         contenido = f.readlines()[:5]  # Mostrar solo las primeras 5 líneas
                     
                     st.success(f"Procesamiento completado. Se procesaron {len(df)} registros.")
