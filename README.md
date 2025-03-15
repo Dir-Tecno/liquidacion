@@ -36,11 +36,9 @@ streamlit run app_liquidacion.py
 
    b. **Seleccionar fecha**: Elija la fecha que desea incluir en el archivo HAB utilizando el selector de fecha.
    
-   c. **Establecer número inicial de comprobante**: Indique el número inicial desde el cual se incrementará automáticamente el campo NRO COMPROBANTE para cada registro.
+   c. **Generar archivo**: Haga clic en el botón "Generar archivo HAB" para procesar el archivo.
 
-   d. **Generar archivo**: Haga clic en el botón "Generar archivo HAB" para procesar el archivo.
-
-   e. **Descargar resultado**: Una vez procesado, haga clic en "Descargar archivo HAB" para guardar el archivo generado.
+   d. **Descargar resultado**: Una vez procesado, haga clic en "Descargar archivo HAB" para guardar el archivo generado.
 
 ## Estructura del archivo de entrada
 

@@ -161,13 +161,8 @@ fecha = st.date_input(
 fecha_formateada = fecha.strftime("%Y%m%d")
 
 # Número inicial de comprobante
-nro_comprobante_inicial = st.number_input(
-    "Número inicial de comprobante",
-    min_value=1,
-    value=1,
-    step=1,
-    help="El número de comprobante se incrementará automáticamente para cada registro"
-)
+st.text("Número de comprobante: 1")
+nro_comprobante_inicial = 1  # Valor fijo que no puede ser modificado por el usuario
 
 # Mostrar vista previa si se cargó un archivo
 if uploaded_file is not None:
@@ -244,7 +239,6 @@ st.sidebar.markdown("""
 ### Instrucciones
 1. Cargue un archivo Excel con las columnas requeridas
 2. Seleccione la fecha para el archivo HAB
-3. Establezca el número inicial de comprobante
-4. Haga clic en "Generar archivo HAB"
-5. Descargue el archivo generado
+3. Haga clic en "Generar archivo HAB"
+4. Descargue el archivo generado
 """)
